@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="home">
@@ -18,9 +19,9 @@
     <div>
       <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
     </div>
-    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Button</span></button>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only toggle-span" aria-expanded="false">Button</span></button>
     <nav>
-      <ul class="primary-navigation underline-indicators flex interactive-flex">
+      <ul data-visible="false" class="primary-navigation underline-indicators flex interactive-flex">
         <li class="active"><a href="index.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>00</span>Home</a></li>
         <li><a href="destination.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>01</span>Destination</a></li>
         <li><a href="crew.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>02</span>Crew</a></li>
@@ -41,6 +42,7 @@
       <a href="" class="large-button uppercase ff-serif text-dark bg-white">Explore</a>
     </div>
   </div>
+
 
 </body>
 </html>
