@@ -14,7 +14,9 @@
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="home">
-
+  <!-- for accessibility purposes -->
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  
   <header class="primary-header flex">
     <div>
       <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
@@ -22,15 +24,15 @@
     <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only toggle-span" aria-expanded="false">Button</span></button>
     <nav>
       <ul data-visible="false" class="primary-navigation underline-indicators flex interactive-flex">
-        <li class="active"><a href="index.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>00</span>Home</a></li>
-        <li><a href="destination.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>01</span>Destination</a></li>
-        <li><a href="crew.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>02</span>Crew</a></li>
-        <li><a href="technology.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>03</span>Technology</a></li>
+        <li class="active"><a href="index.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span aria-hidden="true">00</span>Home</a></li>
+        <li><a href="destination.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span aria-hidden="true">01</span>Destination</a></li>
+        <li><a href="crew.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span aria-hidden="true">02</span>Crew</a></li>
+        <li><a href="technology.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span aria-hidden="true">03</span>Technology</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="grid-container grid-container--home">
+  <main id="main" class="grid-container grid-container--home">
     <div>
       <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
         <span class="fs-900 ff-serif text-white d-block">Space</span></h1>
@@ -39,10 +41,9 @@
         because we’ll give you a truly out of this world experience!</p>
     </div>
     <div>
-      <a href="" class="large-button uppercase ff-serif text-dark bg-white">Explore</a>
+      <a href="#" class="large-button uppercase ff-serif text-dark bg-white">Explore</a>
     </div>
-  </div>
-
+  </main>
 
 </body>
 </html>
