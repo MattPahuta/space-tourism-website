@@ -95,6 +95,11 @@ body {
 img,
 picture {
   max-width: 100%;
+  /* display: block on picture element overrides the hidden behavior */
+  /* display: block; */
+}
+
+img {
   display: block;
 }
 
