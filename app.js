@@ -23,7 +23,6 @@ navToggle.addEventListener('click', () => {
 // split into seperate JS file?
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = document.querySelectorAll('[role="tab"]'); // node list
-let tabFocus = 0;
 
 tabList.addEventListener('keydown', updateTabFocus)
 
@@ -31,6 +30,7 @@ tabs.forEach(tab => {
   tab.addEventListener('click', updateTabPanel);
 })
 
+let tabFocus = 0;
 function updateTabFocus(e) {
   const keydownLeft = 37; // ArrowLeft keyCode
   const keydownRight = 39; // ArrowRight keyCode
