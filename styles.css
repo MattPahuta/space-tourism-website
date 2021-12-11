@@ -610,6 +610,7 @@ body {
 .grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
+  align-self: start;
 }
 
 .grid-container--destination > .tab-list {
@@ -722,19 +723,25 @@ body {
     justify-content: start;
   }
 
-  .grid-container--crew > .dot-indicators {
+  /* .grid-container--crew > .dot-indicators {
     justify-self: start;
-  }
-
-  .grid-container--crew > picture {
-    align-self: end;
-  }
+  } */
 
   .grid-container--crew {
+    /* tweak this grid-template-columns */
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 36rem) minmax(0, 24rem) minmax(1rem, 1fr);
+    justify-items: start;
     grid-template-areas: 
       '. title title .'
       '. content image .'
       '. dots image .';
+  }
+
+  .grid-container--crew > picture {
+    /* use grid-column: span 2; on technology page as well */
+    grid-column: span 2;
+    align-self: end;
+    /* max-width: 100%; */
   }
 
 }

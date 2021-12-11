@@ -20,7 +20,7 @@ navToggle.addEventListener('click', () => {
 
 // *** Tabs behavior *** //
 // ********************* //
-// split into seperate JS file?
+// split into seperate JS file? - event listeners throw errors on home page 
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = document.querySelectorAll('[role="tab"]'); // node list
 
