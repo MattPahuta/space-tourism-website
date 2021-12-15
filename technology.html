@@ -49,21 +49,26 @@
         <img src="assets/technology/image-space-capsule-landscape.jpg" alt="The space capsule approaching docking port">
       </picture>
 
-      <!-- numbered circle buttons (tabs) -->
+      <!-- numbered circle buttons (tab-control) -->
       <div class="number-indicators flex" role="tablist" aria-label="technology list">
-        <button aria-selected="true" aria-controls="vehicle-tab" data-image="vehicle-image" role="tab" tabindex="0">
-          <span class="button-span">1</span>
+
+        <button class="small-num-btn" aria-selected="true" aria-controls="vehicle-tab" data-image="vehicle-image" role="tab" tabindex="0">
+          <!-- <span>1</span> -->
+          1
         </button>
-        <button aria-selected="false" aria-controls="spaceport-tab" data-image="spaceport-image" role="tab" tabindex="-1">
-          <span class="button-span">2</span>
+
+        <button class="small-num-btn" aria-selected="false" aria-controls="spaceport-tab" data-image="spaceport-image" role="tab" tabindex="-1">
+          <!-- <span>2</span> -->2
         </button>
-        <button aria-selected="false" aria-controls="capsule-tab" data-image="capsule-image" role="tab" tabindex="-1">
-          <span class="button-span">3</span>
+
+        <button class="small-num-btn" aria-selected="false" aria-controls="capsule-tab" data-image="capsule-image" role="tab" tabindex="-1">
+          <!-- <span>3</span> -->3
         </button>
+
       </div>
   
       <!-- launch vehicle  -->
-      <article id="vehicle-tab" class="crew-details flow" role="tabpanel" tabindex="0">
+      <article id="vehicle-tab" class="tech-details flow" role="tabpanel" tabindex="0">
         <header class="flow flow--space-small">
           <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
           <p class="fs-700 uppercase ff-serif">Launch vehicle</p>
@@ -75,7 +80,7 @@
       </article>
 
       <!-- spaceport -->
-      <article hidden id="spaceport-tabb" class="crew-details flow" role="tabpanel" tabindex="-1">
+      <article hidden id="spaceport-tab" class="tech-details flow" role="tabpanel" tabindex="-1">
         <header class="flow flow--space-small">
           <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
           <p class="fs-700 uppercase ff-serif">Spaceport</p>
@@ -87,7 +92,7 @@
       </article>
 
       <!-- space capsule-->
-      <article hidden id="capsule-tab" class="crew-details flow" role="tabpanel" tabindex="-1">
+      <article hidden id="capsule-tab" class="tech-details flow" role="tabpanel" tabindex="-1">
         <header class="flow flow--space-small">
           <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
           <p class="fs-700 uppercase ff-serif">Space capsule</p>
@@ -98,7 +103,7 @@
           and plenty of other activities to keep you entertained.</p>
       </article>     
 
-  
+
     </main>
   
     </body>

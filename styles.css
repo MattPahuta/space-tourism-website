@@ -85,7 +85,7 @@ body {
   font-size: var(--fs-400);
   color: hsl( var(--clr-white));
   background-color: hsl( var(--clr-dark));
-  line-height: 1.5;
+  line-height: 1.6;
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr;
@@ -249,7 +249,8 @@ select {
 /* Components       */
 /* ---------------- */
 
-.large-button {
+.large-button,
+.small-num-btn {
   font-size: 2rem;
   position: relative;
   display: inline-grid;
@@ -261,7 +262,8 @@ select {
   text-decoration: none;
 }
 
-.large-button::after {
+.large-button::after,
+.small-num-btn::after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -452,17 +454,10 @@ select {
   font-size: var(--fs-500);
 }
 
-.number-indicators button {
-  position: relative;
-  /* display: inline-grid; */
-  place-items: center;
-  border-radius: 50%;
-  aspect-ratio: 1;
+.small-num-btn {
+  font-size: 1rem;
+  padding: 0 1em;
   border: 1px solid hsl( var(--clr-white) / 1);
-}
-
-.button-span {
-  padding: 1em;
 }
 
 .number-indicators > [aria-selected="true"] {
@@ -580,9 +575,10 @@ body {
   padding-bottom: 4rem;
 }
 
-/* *** will need to be changed to add class to p tags on other pages *** */
+/* *** will need to be changed to add class to p tags on other pages??? *** */
 .grid-container p:not([class]) {
-  max-width: 50ch;
+  max-width: 40ch;
+  color: hsl(var(--clr-light));
 }
 
 .numbered-title {
@@ -679,13 +675,27 @@ body {
 
 .grid-container--tech {
   --flow-space: 2rem;
+  padding-inline: 0;
   grid-template-areas: 
     'title'
     'image'
-    'dots'
+    'numbers'
     'content';
 
 }
+
+.grid-container--tech > .number-indicators {
+  grid-area: numbers;
+}
+
+.grid-container--tech > .tech-details {
+  grid-area: content;
+}
+
+.grid-container--tech h2 {
+  color: hsl(var(--clr-light));
+}
+
 
 @media (min-width: 45em) {
 

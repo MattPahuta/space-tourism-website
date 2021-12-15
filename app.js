@@ -1,3 +1,5 @@
+console.log('JS connected!');
+
 // *** Mobile navigation functionality *** //
 
 const nav = document.querySelector('.primary-navigation');
