@@ -4,6 +4,7 @@
 
 :root {
   /* colors */
+  --clr-medium: 229 18% 12%;
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
@@ -35,7 +36,7 @@
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 49em) {
   :root {
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
@@ -299,6 +300,8 @@ select {
   padding: 0;
   margin: 0;
   background: hsl( var(--clr-dark) / 0.95);
+  background: hsl( var(--clr-medium) / 0.95);
+
 }
 
 .primary-navigation a {
@@ -382,7 +385,7 @@ select {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 49em) {
   nav {
     order: 2;
   }
@@ -478,6 +481,12 @@ select {
   border-color: hsl( var(--clr-white) / 1);
 }
 
+@media (min-width: 35em) {
+  .small-num-btn {
+    font-size: 1.5rem;
+  }
+}
+
 
 /* ------------------ */
 /* Specific Page BGS  */
@@ -501,7 +510,7 @@ body {
   }
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 49rem) {
   .home {
     background-image: url(./assets/home/background-home-desktop.jpg);
   }
@@ -520,7 +529,7 @@ body {
   }
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 49rem) {
   .destination {
     background-image: url(./assets/destination/background-destination-desktop.jpg);
   }
@@ -538,7 +547,7 @@ body {
   }
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 49rem) {
   .crew {
     background-image: url(./assets/crew/background-crew-desktop.jpg);
   }
@@ -556,7 +565,7 @@ body {
   }
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 49rem) {
   .technology {
     background-image: url(./assets/technology/background-technology-desktop.jpg);
   }
@@ -579,6 +588,12 @@ body {
 .grid-container p:not([class]) {
   max-width: 40ch;
   color: hsl(var(--clr-light));
+}
+
+@media (min-width: 35em) {
+  .grid-container p:not([class]) {
+    max-width: 48ch;
+  }
 }
 
 .numbered-title {
@@ -681,7 +696,14 @@ body {
     'image'
     'numbers'
     'content';
+}
 
+.tech-heading {
+  margin-left: 2em;
+}
+
+.tech-picture {
+  grid-area: image;
 }
 
 .grid-container--tech > .number-indicators {
@@ -694,10 +716,11 @@ body {
 
 .grid-container--tech h2 {
   color: hsl(var(--clr-light));
+  /* font-size: var(--fs-600); */
 }
 
 
-@media (min-width: 45em) {
+@media (min-width: 49em) {
 
   .grid-container {
     column-gap: var(--container-gap, 2rem);
