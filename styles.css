@@ -592,7 +592,7 @@ body {
 
 @media (min-width: 35em) {
   .grid-container p:not([class]) {
-    max-width: 48ch;
+    max-width: 50ch;
   }
 }
 
@@ -782,5 +782,42 @@ body {
     /* max-width: 100%; */
   }
 
+  .grid-container--tech {
+    /* grid-template-columns: minmax(1rem, 1fr) minmax(0, 36rem) minmax(0, 24rem) minmax(1rem, 1fr); */
+    grid-template-columns: minmax(1rem, 6rem) minmax(0, 12rem) minmax(0, 27rem) minmax(1rem, 1fr);
+
+    justify-items: start;
+    grid-template-areas: 
+      '. title title .'
+      '. numbers content image'
+      /* '. numbers content image' */
+  }
+
+  .number-indicators {
+    flex-direction: column;
+    padding: 0 2em;
+  }
+
+  .small-num-btn {
+    font-size: 1.8rem;
+  }
+
+  .grid-container--tech > picture {
+    grid-column: span 2;
+    justify-self: end;
+  }
+
+}
+
+@media (min-width: 60em) {
+  /* handle technology page on x-wide screens */
+
+  /* .grid-container--tech {
+    grid-template-columns: minmax(1rem, 6rem) minmax(0, 12rem) minmax(0, 27rem) minmax(1rem, 1fr);
+    justify-items: start;
+    grid-template-areas: 
+      '. title title .'
+      '. numbers content image'
+  } */
 }
 
