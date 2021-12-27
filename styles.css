@@ -10,7 +10,9 @@
   --clr-white: 0 0% 100%;
 
   /* font sizes */
-  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  /* --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem); */
+  /* --fs-900: clamp(5rem, 20vw, 9.375rem); */
+  --fs-900: 5rem;
   --fs-800: 3.5rem;
   --fs-700: 1.5rem;
   --fs-600: 1rem;
@@ -28,6 +30,7 @@
 
 @media (min-width: 35em) {
   :root {
+    --fs-900: 9.375rem;
     --fs-800: 5rem;
     --fs-700: 2.5rem;
     --fs-600: 1.5rem;
@@ -160,6 +163,11 @@ select {
   --flow-space: .75rem;
 }
 
+.padding-sml {
+  padding: 1rem 0;
+}
+
+
 .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -213,7 +221,7 @@ select {
 
 .letter-spacing-1 { letter-spacing: 4.75px; } 
 .letter-spacing-2 { letter-spacing: 2.7px; } 
-.letter-spacing-3 { letter-spacing: 2.35px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; }
 
 .uppercase { text-transform: uppercase; }
 
@@ -252,7 +260,8 @@ select {
 
 .large-button,
 .number-indicator-btn {
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: 1.15rem;
   position: relative;
   display: inline-grid;
   z-index: 1;
@@ -483,6 +492,9 @@ select {
 }
 
 @media (min-width: 35em) {
+  .large-button {
+    font-size: 1.75rem;
+  }
   .number-indicator-btn {
     font-size: 1.5rem;
   }
@@ -563,18 +575,19 @@ body {
   /* row-gap: 10%; */
   text-align: center;
   padding-inline: 1rem;
-  padding-bottom: 4rem;
+  /* padding-bottom: 4rem; */
+  padding-bottom: .25rem;
 }
 
 /* *** will need to be changed to add class to p tags on other pages??? *** */
 .grid-container p:not([class]) {
-  max-width: 40ch;
+  max-width: 39ch;
   color: hsl(var(--clr-light));
 }
 
 @media (min-width: 35em) {
   .grid-container p:not([class]) {
-    max-width: 50ch;
+    max-width: 49ch;
   }
 }
 
@@ -721,6 +734,7 @@ body {
   .grid-container--home {
     padding-bottom: max(6rem, 20vh);
     align-items: end;
+    justify-items: right;
   }
 
   .grid-container--destination {
