@@ -751,6 +751,10 @@ body {
     max-width: 90%;
   }
 
+  .planet-pics {
+    margin-top: 6rem;
+  }
+
   .destination-meta {
     --gap: min(6vw, 6rem);
     justify-content: start;
@@ -763,6 +767,7 @@ body {
   .grid-container--crew {
     /* tweak this grid-template-columns */
     grid-template-columns: minmax(1rem, 1fr) minmax(0, 36rem) minmax(0, 24rem) minmax(1rem, 1fr);
+    grid-template-rows: 8rem minmax(20rem, 26rem) 12.5rem;
     justify-items: start;
     grid-template-areas: 
       '. title title .'
@@ -773,6 +778,12 @@ body {
   .grid-container--crew > picture {
     grid-column: span 2;
     align-self: end;
+    margin-top: 0;
+  }
+
+  .dot-indicators {
+    margin-top: 0;
+    padding-bottom: 4em;
   }
 
   .grid-container--tech {
