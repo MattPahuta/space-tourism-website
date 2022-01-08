@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [solution URL](https://www.frontendmentor.io/solutions/mobilefirst-solution-using-css-grid-flexbox-and-javascript-Pvjnk5Yxd)
+- [live site URL](https://mattpahuta.github.io/space-tourism-website/index.html)
 
 ## My process
 
