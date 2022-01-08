@@ -32,8 +32,10 @@ Users should be able to:
 ![](./screenshot.jpg)
 
 
-![The homepage on desktop view](./assets/screenshots/desktop-home_space-tourism.png "Homepage on desktop")
-![The destination page on desktop view](./assets/screenshots/desktop-destination_space-tourism.png "Destination page on desktop")
+![The homepage on tablet view](./assets/screenshots/tablet-home_space-tourism.png "Homepage on tablet")
+![The destination page on tablet view](./assets/screenshots/tablet-destination_space-tourism.png "Destination page on tablet")
+![The crew page on tablet view](./assets/screenshots/tablet-crew_space-tourism.png "Crew page on tablet")
+![The technology page on tablet view](./assets/screenshots/tablet-tech_space-tourism.png "Technology page on tablet")
 
 ### Links
 
