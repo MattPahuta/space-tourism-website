@@ -27,15 +27,14 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
 
-### Screenshot
+### Screenshots
 
 ![](./screenshot.jpg)
 
 
-![The homepage on tablet view](./assets/screenshots/tablet-home_space-tourism.png "Homepage on tablet")
-![The destination page on tablet view](./assets/screenshots/tablet-destination_space-tourism.png "Destination page on tablet")
+![The homepage on desktop view](./assets/screenshots/desktop-home_space-tourism.png "Homepage on desktop")
 ![The crew page on tablet view](./assets/screenshots/tablet-crew_space-tourism.png "Crew page on tablet")
-![The technology page on tablet view](./assets/screenshots/tablet-tech_space-tourism.png "Technology page on tablet")
+![The destination page on mobile view](./assets/screenshots/mobile-destination_space-tourism.png "Destination page on mobile")
 
 ### Links
 
