@@ -99,8 +99,6 @@ body {
 img,
 picture {
   max-width: 100%;
-  /* display: block on picture element overrides the hidden behavior */
-  /* display: block; */
 }
 
 img {
@@ -400,13 +398,11 @@ select {
   }
   .primary-header::after {
     content: '';
-    /* display: block; */
     position: relative;
     height: 1px;
     width: 100%;
     margin-right: -2.5rem;
     background: hsl( var(--clr-white) / .25);
-    /* order: 1; */
   }
   .primary-navigation {
     margin-block: 2rem;
@@ -633,7 +629,7 @@ body {
 /* crew page layout */
 
 .grid-container--crew {
-  --flow-space: 2rem;
+  max-width: 2000px;
   grid-template-areas: 
     'title'
     'image'
@@ -644,7 +640,7 @@ body {
 
 .grid-container--crew > picture {
   grid-area: image;
-  max-width: 60%;
+  max-width: 58%;
   border-bottom: 1px solid hsl( var(--clr-white) / .1);
 }
 
@@ -671,6 +667,7 @@ body {
     justify-content: space-evenly;
   }
   .grid-container--crew {
+    --flow-space: 2rem;
     padding-bottom: 0;
     grid-template-areas: 
       'title'
@@ -684,6 +681,7 @@ body {
 /* technology page layout */
 
 .grid-container--tech {
+  max-width: 2000px;
   --flow-space: 2rem;
   padding-inline: 0;
   grid-template-areas: 
@@ -718,7 +716,6 @@ body {
 
   .grid-container {
     column-gap: var(--container-gap, 2rem);
-    /* play with these values - increase middle col max values? */
     grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
     text-align: left;
   }
@@ -760,12 +757,8 @@ body {
     justify-content: start;
   }
 
-  /* .grid-container--crew > .dot-indicators {
-    justify-self: start;
-  } */
-
   .grid-container--crew {
-    /* tweak this grid-template-columns */
+    margin-top: auto;
     grid-template-columns: minmax(1rem, 1fr) minmax(0, 36rem) minmax(0, 24rem) minmax(1rem, 1fr);
     grid-template-rows: 8rem minmax(20rem, 26rem) 12.5rem;
     justify-items: start;
@@ -794,6 +787,11 @@ body {
       '. numbers content image'
   }
 
+  .tech-picture {
+    margin-top: 0;
+    padding-bottom: 5rem;
+  }
+
   .number-indicators {
     flex-direction: column;
     padding: 0 2em;
@@ -810,3 +808,22 @@ body {
 
 }
 
+/* handle very wide screens */
+ @media (min-width: 1800px) {
+  .grid-container--destination {
+    padding-top: 10rem;
+  }
+
+  .grid-container--tech {
+    grid-template-columns: minmax(1rem, 8rem) minmax(0, 18rem) minmax(0, 30rem) minmax(1rem, 1fr) 6rem;
+    grid-template-areas: 
+      '. title title .'
+      '. numbers content image .'
+  }
+
+  .grid-container--tech > picture {
+    grid-column: 4 / 5
+  }
+
+
+} 
