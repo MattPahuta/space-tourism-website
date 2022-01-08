@@ -5,6 +5,7 @@
 *.sketch
 *.fig
 styles-test.css
+app.js
 
 # Avoid accidental XD upload if you convert the design file
 ###############################################

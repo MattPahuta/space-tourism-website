@@ -1,17 +1,13 @@
 /* ----------------- */
 /* Custom Properties */
 /* ----------------- */
-
 :root {
   /* colors */
   --clr-medium: 229 18% 12%;
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
-
   /* font sizes */
-  /* --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem); */
-  /* --fs-900: clamp(5rem, 20vw, 9.375rem); */
   --fs-900: 5rem;
   --fs-800: 3.5rem;
   --fs-700: 1.5rem;
@@ -20,12 +16,10 @@
   --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
-
   /* fonts */
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
-
 }
 
 @media (min-width: 35em) {
@@ -38,7 +32,7 @@
     --fs-400: 1rem;
   }
 }
-/* initially 49em */
+
 @media (min-width: 62em) {
   :root {
     --fs-800: 6.25rem;
@@ -52,9 +46,6 @@
 /* -------------- */
 /* Reset          */
 /* -------------- */
-
-/* Add more later:  https://piccalil.li/blog/a-modern-css-reset/ */ 
-
 *,
 *::before,
 *::after {
@@ -105,7 +96,6 @@ img {
   display: block;
 }
 
-/* form elements don't auto-inherit fonts */
 input,
 button,
 textarea,
@@ -148,11 +138,6 @@ select {
   display: block;
 }
 
-/* .flow * + * {
-  margin-top: var(--flow-space, 1rem);
-  outline: 1px solid red;
-} */
-
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
@@ -165,13 +150,11 @@ select {
   padding: 1rem 0;
 }
 
-
 .container {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
 }
-
 
 /* for screen-readers only */
 .sr-only {
@@ -210,17 +193,14 @@ select {
 .text-accent { color: hsl(var(--clr-light)); }
 .text-white { color: hsl(var(--clr-white)); }
 
-
 /* typography */
-
 .ff-serif { font-family: var(--ff-serif); } 
 .ff-sans-cond { font-family: var(--ff-sans-cond); } 
-.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); }
 
 .letter-spacing-1 { letter-spacing: 4.75px; } 
 .letter-spacing-2 { letter-spacing: 2.7px; } 
 .letter-spacing-3 { letter-spacing: 2.35px; }
-
 .uppercase { text-transform: uppercase; }
 
 .fs-900 { font-size: var(--fs-900); }
@@ -258,7 +238,6 @@ select {
 
 .large-button,
 .number-indicator-btn {
-  /* font-size: 2rem; */
   font-size: 1.15rem;
   position: relative;
   display: inline-grid;
@@ -308,7 +287,6 @@ select {
   margin: 0;
   background: hsl( var(--clr-dark) / 0.95);
   background: hsl( var(--clr-medium) / 0.95);
-
 }
 
 .primary-navigation a {
@@ -333,6 +311,7 @@ select {
 
 
 @media (max-width: 35rem) {
+
   .primary-navigation {
     --underline-gap: .5rem;
     position: fixed;
@@ -351,7 +330,6 @@ select {
   }
   .primary-navigation[data-visible="true"] {
     transform: translateX(0);
-
   }
   .mobile-nav-toggle {
     display: block;
@@ -368,22 +346,22 @@ select {
     border: 0;
     cursor: pointer;
   }
-
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url(./assets/shared/icon-close.svg);
   }
-
   .mobile-nav-toggle:focus-visible {
     outline: 3px solid white;
     outline-offset: 5px;
   }
+
 }
 
-/* adjust this padding?? */
 @media (min-width: 35em) and (max-width: 44.999em) {
+
   .primary-navigation a > span {
     display: none;
   }
+
 }
 
 @media (min-width: 35em) {
@@ -393,6 +371,7 @@ select {
 }
 
 @media (min-width: 62em) {
+
   nav {
     order: 2;
   }
@@ -407,6 +386,7 @@ select {
   .primary-navigation {
     margin-block: 2rem;
   }
+
 }
 
 .underline-indicators > * {
@@ -415,6 +395,11 @@ select {
   cursor: pointer;
   border-bottom: .2rem solid hsl( var(--clr-white) /0 );
   background-color: transparent;
+}
+
+.destination-indicators {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0;
 }
 
 .underline-indicators > *:hover,
@@ -496,7 +481,6 @@ select {
   }
 }
 
-
 /* ------------------ */
 /* Specific Page BGS  */
 /* ------------------ */
@@ -560,7 +544,6 @@ body {
   }
 }
 
-
 /* ------------------ */
 /* Layout             */
 /* ------------------ */
@@ -568,14 +551,11 @@ body {
 .grid-container {
   display: grid;
   place-items: center;
-  /* row-gap: 10%; */
   text-align: center;
   padding-inline: 1rem;
-  /* padding-bottom: 4rem; */
   padding-bottom: .25rem;
 }
 
-/* *** will need to be changed to add class to p tags on other pages??? *** */
 .grid-container p:not([class]) {
   max-width: 39ch;
   color: hsl(var(--clr-light));
@@ -604,7 +584,7 @@ body {
 
 .grid-container--destination > picture {
   grid-area: image;
-  max-width: 60%;
+  max-width: 50%;
   align-self: start;
 }
 
@@ -616,14 +596,19 @@ body {
   grid-area: content;
 }
 
+.destination-desc {
+  margin-top: 0.75rem;
+}
+
 .destination-meta {
   flex-direction: column;
   border-top: 1px solid hsl( var(--clr-white) / .1);
   padding-top: 2.5rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 .destination-meta p {
   font-size: 1.75rem;
+  margin-top: 0;
 }
 
 /* crew page layout */
@@ -635,7 +620,6 @@ body {
     'image'
     'dots'
     'content';
-
 }
 
 .grid-container--crew > picture {
@@ -658,9 +642,15 @@ body {
 
 @media (min-width: 35em) {
 
+  .destination-info {
+    margin-top: 0.25rem;
+  }
   .numbered-title {
     justify-self: start;
     margin-top: 2rem;
+  }
+  .destination-desc {
+    max-width: 56ch;
   }
   .destination-meta {
     flex-direction: row;
@@ -692,7 +682,7 @@ body {
 }
 
 .tech-heading {
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 .tech-picture {
@@ -810,6 +800,7 @@ body {
 
 /* handle very wide screens */
  @media (min-width: 1800px) {
+
   .grid-container--destination {
     padding-top: 10rem;
   }
